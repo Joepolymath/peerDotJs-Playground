@@ -49,3 +49,5 @@ function isEqual(firstObject, secondObject) {
 }
 
 console.log(isEqual(obj1, obj2));
+
+module.exports = isEqual;

@@ -1,0 +1,24 @@
+{
+  "name": "peer",
+  "version": "1.0.0",
+  "description": "Peer.js is a javascript community that explores javascript programming with a peer and group study strategy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --passWithNoTests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joepolymath/peerDotJs-Playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joepolymath/peerDotJs-Playground/issues"
+  },
+  "homepage": "https://github.com/Joepolymath/peerDotJs-Playground#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
