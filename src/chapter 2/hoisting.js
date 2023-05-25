@@ -19,4 +19,4 @@ function scopeWithLet() {
 
 scopeWithVar();
 
-// scopeWithLet();
+scopeWithLet();

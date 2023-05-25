@@ -24,4 +24,4 @@ function scopeLet(condition) {
   console.log(a);
 }
 
-// scopeLet(true);
+scopeLet(true);

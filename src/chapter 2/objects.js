@@ -15,11 +15,21 @@ const obj2 = {
 console.log(obj1 === obj2);
 console.log(obj1 == obj2);
 
+const human = {
+  name: 'Joshua',
+  age: 34,
+};
+
+const human2 = {
+  name: 'Adam',
+  age: 35,
+};
+
 // This is because javascript objects are memory location-sensitive.
 // To compare two objects, we need to write a utility function for that.
 
 function isEqual(firstObject, secondObject) {
-  // guard clause to ensure both objects parsed
+  // guard clause to ensure both objects parsed || Defensive programming
   if (
     !firstObject ||
     !secondObject ||
@@ -29,23 +39,22 @@ function isEqual(firstObject, secondObject) {
     throw new Error("Arguments with type 'object' not parsed to the function");
   }
 
-  // getting the array of property names.
-  const firstPropertyNames = Object.getOwnPropertyNames(firstObject);
-  const secondPropertyNames = Object.getOwnPropertyNames(secondObject);
+  const firstObjectProperties = Object.getOwnPropertyNames(firstObject);
+  console.log(firstObjectProperties);
+  const secondObjectProperties = Object.getOwnPropertyNames(secondObject);
+  console.log(secondObjectProperties);
 
-  // check if the lengths of the array of property names match
-  if (firstPropertyNames.length !== secondPropertyNames.length) {
+  if (firstObjectProperties.length !== secondObjectProperties.length) {
     return false;
   }
 
-  for (let i = 0; i < firstPropertyNames.length; i++) {
-    let propertyName = firstPropertyNames[i];
+  for (let i = 0; i < firstObjectProperties.length; i++) {
+    let propertyName = firstObjectProperties[i];
     if (firstObject[propertyName] !== secondObject[propertyName]) {
       return false;
     }
   }
-
-  return true; // means the two objects are equal
+  return true;
 }
 
 console.log(isEqual(obj1, obj2));
